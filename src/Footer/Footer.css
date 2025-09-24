@@ -1,0 +1,24 @@
+.footerWhite{
+width: 100vw;
+height: 4rem;
+margin: 250px 0px 0px 0px;
+background: rgb(184, 168, 168);
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 300;
+font-size: small;
+color: black;
+}
+.footerBlack{
+width: 100vw;
+height: 4rem;
+margin: 250px 0px 0px 0px;
+background: rgb(40, 40,40);
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 300;
+font-size: small;
+color: rgba(220, 20,60);
+}

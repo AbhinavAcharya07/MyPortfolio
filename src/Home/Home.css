@@ -1,0 +1,49 @@
+#intro{
+    width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    position: relative; 
+}
+.bg{
+   
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    height:100vh;
+    float: right;
+}
+.introContent{
+    height: 100vh;
+width: 100vw;
+padding: 2rem;
+font-size: 3rem;
+font-weight: 700;
+display: flex;
+flex-direction: column;
+justify-content: center;
+z-index: 1000;
+}
+#dev{
+    font-size: 2rem;
+}
+.hiWhite{
+color: rgb(254, 128, 37);
+}
+.hiBlack{
+    color: rgba(220, 20,60);
+}
+@media screen  and (max-width:1050px){
+    .intro{
+        flex-direction: column;
+        text-align: center;
+    }
+    .bg{
+        flex: none;
+         width: 100%;
+         padding: 5px 5px;
+        mix-blend-mode: multiply;
+    }
+}
