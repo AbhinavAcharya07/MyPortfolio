@@ -3,7 +3,20 @@ import "./About.css";
 import school from "../assets/school.jpg";
 import puc from "../assets/puc.jpg";
 import college from "../assets/college.jpg";
+import { motion } from "motion/react";
 const About = (props) => {
+  const educationTextHead =
+    props.appResponse === "white"
+      ? "educationTextWhiteHead"
+      : "educationTextBlackHead";
+  const educationBarDiv =
+    props.appResponse === "white" ? "educationBarWhite" : "educationBarBlack";
+  const educationText =
+    props.appResponse === "white" ? "educationTextWhite" : "educationTextBlack";
+  // const educationTextPara =
+  //   props.appResponse === "white"
+  //     ? "educationTextWhiteSpan"
+  //     : "educationTextBlackSpan";
   return (
     <section id="about">
       <div
@@ -12,15 +25,7 @@ const About = (props) => {
         }
       >
         {" "}
-        <h1
-          id={
-            props.appResponse === "white"
-              ? "educationTextWhiteHead"
-              : "educationTextBlackHead"
-          }
-        >
-          My Education
-        </h1>
+        <h1 id={educationTextHead}>My Education</h1>
         <br />
         <p>
           I am a B.tech Mechanical Engineering Graduate From Uvce.Being a
@@ -36,116 +41,83 @@ const About = (props) => {
         </p>
       </div>
       <div className="educationBars">
-        <div
-          className={
-            props.appResponse === "white"
-              ? "educationBarWhite"
-              : "educationBarBlack"
-          }
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "0px 0px -150px 0px" }}
+          whileHover={{ scale: 1.1 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+            type: "spring",
+            stiffness: 300,
+            damping: 20,
+          }}
+          className={educationBarDiv}
         >
           <img src={college} alt="" className="educationImg" />
-          <div
-            className={
-              props.appResponse === "white"
-                ? "educationTextWhite"
-                : "educationTextBlack"
-            }
-          >
-            <h1
-              id={
-                props.appResponse === "white"
-                  ? "educationTextWhiteHead"
-                  : "educationTextBlackHead"
-              }
-            >
-              Graduation
-            </h1>
+          <div className={educationText}>
+            <h1 id={educationTextHead}>Graduation</h1>
             <p
-              id={
-                props.appResponse === "white"
-                  ? "educationTextWhiteSpan"
-                  : "educationTextBlackSpan"
-              }
+            // id={educationTextPara}
             >
               I am a B.Tech in Mechanical Engineering student at the University
               of Visvesvaraya College of Engineering, Bengaluru,with a CGPA of{" "}
               <b>7.28.</b>
             </p>
           </div>
-        </div>
-        <div
-          className={
-            props.appResponse === "white"
-              ? "educationBarWhite"
-              : "educationBarBlack"
-          }
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "0px 0px -150px 0px" }}
+          whileHover={{ scale: 1.1 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+            type: "spring",
+            stiffness: 300,
+            damping: 20,
+          }}
+          className={educationBarDiv}
         >
           <img src={puc} alt="" className="educationImg" />
-          <div
-            className={
-              props.appResponse === "white"
-                ? "educationTextWhite"
-                : "educationTextBlack"
-            }
-          >
-            <h1
-              id={
-                props.appResponse === "white"
-                  ? "educationTextWhiteHead"
-                  : "educationTextBlackHead"
-              }
-            >
-              Pre University (PUC)
-            </h1>
+          <div className={educationText}>
+            <h1 id={educationTextHead}>Pre University (PUC)</h1>
             <p
-              id={
-                props.appResponse === "white"
-                  ? "educationTextWhiteSpan"
-                  : "educationTextBlackSpan"
-              }
+            // id={educationTextPara}
             >
               I completed my Pre-University education with a PCMB stream at SDP
               Temple PU College, Mandharthi, Udupi, with a percentage of{" "}
               <b>93.16%.</b>
             </p>
           </div>
-        </div>
-        <div
-          className={
-            props.appResponse === "white"
-              ? "educationBarWhite"
-              : "educationBarBlack"
-          }
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "0px 0px -150px 0px" }}
+          whileHover={{ scale: 1.1 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+            type: "spring",
+            stiffness: 300,
+            damping: 20,
+          }}
+          className={educationBarDiv}
         >
           <img src={school} alt="" className="educationImg" />
-          <div
-            className={
-              props.appResponse === "white"
-                ? "educationTextWhite"
-                : "educationTextBlack"
-            }
-          >
-            <h1
-              id={
-                props.appResponse === "white"
-                  ? "educationTextWhiteHead"
-                  : "educationTextBlackHead"
-              }
-            >
-              Class 10 (SSLC)
-            </h1>
+          <div className={educationText}>
+            <h1 id={educationTextHead}>Class 10 (SSLC)</h1>
             <p
-              id={
-                props.appResponse === "white"
-                  ? "educationTextWhiteSpan"
-                  : "educationTextBlackSpan"
-              }
+            //  id={educationTextPara}
             >
               I completed my Class 10 at Karnataka Public School Kokkarne,
               Udupi, with a percentage of <b>91.36%.</b>
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -66,7 +66,7 @@ font-weight: 400;
 #educationTextBlackHead{
      color: rgba(220, 20,60);
 }
-#educationTextWhiteSpan{
+/* #educationTextWhiteSpan{
 color: black;
 font-size: 1.15rem;
 font-weight: 400;
@@ -91,4 +91,4 @@ to
 text-shadow: 0 0 10px #fff, 0 0
 20px #00b3ff, 0 0 30px #00b3ff;
 }
-} 
+}  */

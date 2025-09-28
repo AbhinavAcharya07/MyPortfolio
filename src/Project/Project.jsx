@@ -4,6 +4,18 @@ import Project1 from "./Project1";
 import Project2 from "./Project2";
 import Project3 from "./Project3";
 const Project = (props) => {
+  const projectBar =
+    props.appResponse === "white" ? "projectBarWhite" : "projectBarBlack";
+  const projectText =
+    props.appResponse === "white" ? "projectTextWhite" : "projectTextBlack";
+  const projectTextHead =
+    props.appResponse === "white"
+      ? "projectTextWhiteHead"
+      : "projectTextBlackHead";
+  const projectTextPara =
+    props.appResponse === "white"
+      ? "projectTextWhiteSpan"
+      : "projectTextBlackSpan";
   return (
     <section id="project">
       <div
@@ -33,9 +45,24 @@ const Project = (props) => {
         </p>
       </div>
       <div className="projectBars">
-        <Project1 appResponse={props.appResponse}></Project1>
-        <Project2 appResponse={props.appResponse}></Project2>
-        <Project3 appResponse={props.appResponse}></Project3>
+        <Project1
+          projectBar={projectBar}
+          projectText={projectText}
+          projectTextHead={projectTextHead}
+          projectTextPara={projectTextPara}
+        ></Project1>
+        <Project2
+          projectBar={projectBar}
+          projectText={projectText}
+          projectTextHead={projectTextHead}
+          projectTextPara={projectTextPara}
+        ></Project2>
+        <Project3
+          projectBar={projectBar}
+          projectText={projectText}
+          projectTextHead={projectTextHead}
+          projectTextPara={projectTextPara}
+        ></Project3>
       </div>
     </section>
   );

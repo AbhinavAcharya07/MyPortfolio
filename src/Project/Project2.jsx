@@ -1,37 +1,37 @@
 import React from "react";
 import "./Project.css";
 import CryptoPlace from "../assets/CryptoPlace.png";
+import { motion } from "motion/react";
 const Project2 = (props) => {
   return (
-    <div
-      className={
-        props.appResponse === "white" ? "projectBarWhite" : "projectBarBlack"
-      }
+    <motion.div
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "0px 0px -150px 0px" }}
+      whileHover={{ scale: 1.07 }}
+      transition={{
+        duration: 0.5,
+        ease: "easeOut",
+        type: "spring",
+        stiffness: 300,
+        damping: 20,
+      }}
+      className={props.projectBar}
     >
       <img src={CryptoPlace} alt="" className="projectImg2" />
-      <div
-        className={
-          props.appResponse === "white"
-            ? "projectTextWhite"
-            : "projectTextBlack"
-        }
-      >
-        <h1
-          id={
-            props.appResponse === "white"
-              ? "projectTextWhiteHead"
-              : "projectTextBlackHead"
-          }
-        >
-          CryptoPlace
-        </h1>
-        <p
-          id={
-            props.appResponse === "white"
-              ? "projectTextWhiteSpan"
-              : "projectTextBlackSpan"
-          }
-        >
+      <div className={props.projectText}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <h1 id={props.projectTextHead}>CryptoPlace</h1>
+          <a
+            id="plink3"
+            href="https://github.com/AbhinavAcharya07/CryptoPlace"
+            target="_blank"
+            style={{ color: "red" }}
+          >
+            GitrepoLink
+          </a>
+        </div>
+        <p id={props.projectTextPara}>
           Built and deployed a dynamic cryptocurrency dashboard, "CryptoPlace,"
           using React to provide users with up-to-the-minute market data.
           Implemented core features such as fetching and displaying the top 10
@@ -46,7 +46,7 @@ const Project2 = (props) => {
           CoinGecko API, React Google Charts.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
