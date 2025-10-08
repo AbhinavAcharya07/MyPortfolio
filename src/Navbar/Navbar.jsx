@@ -1,15 +1,17 @@
 import React from "react";
-import { useState } from "react";
+import { ModeSwitcher } from "../contextApi.jsx";
+import { useContext } from "react";
 import "./Navbar.css";
 import "../index.css";
 import sun from "../assets/sun.png";
 import moon from "../assets/moon.png";
 import { Link } from "react-scroll";
-const Navbar = ({ navResponse }) => {
-  const [color, setcolor] = useState("white");
+const Navbar = () => {
+  const { color, setColor } = useContext(ModeSwitcher);
   const toggleTheme = () => {
-    setcolor(color === "white" ? "black" : "white");
+    setColor(color === "white" ? "black" : "white");
   };
+
   return (
     <div className={color === "white" ? "navbarWhite" : "navbarBlack"}>
       <header>
@@ -68,7 +70,6 @@ const Navbar = ({ navResponse }) => {
       <button
         onClick={() => {
           toggleTheme();
-          navResponse(color);
         }}
         className={color === "white" ? "whiteMode" : "blackMode"}
       >

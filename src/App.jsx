@@ -1,5 +1,6 @@
 import React from "react";
-import { useState } from "react";
+import { ModeSwitcher } from "./contextApi.jsx";
+import { useContext } from "react";
 import Navbar from "./Navbar/Navbar";
 import Home from "./Home/Home";
 import About from "./About/About";
@@ -8,18 +9,15 @@ import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer";
 ("./Navbar/Navbar.jsx");
 const App = () => {
-  const [color, setcolor] = useState("white");
-  const toggleTheme = (color) => {
-    setcolor(color === "white" ? "black" : "white");
-  };
+  const { color } = useContext(ModeSwitcher);
   return (
     <div className={color === "white" ? "appWhite" : "appBlack"}>
-      <Navbar navResponse={toggleTheme}></Navbar>
-      <Home appResponse={color}></Home>
-      <About appResponse={color}></About>
-      <Project appResponse={color}></Project>
-      <Contact appResponse={color}></Contact>
-      <Footer appResponse={color}></Footer>
+      <Navbar></Navbar>
+      <Home></Home>
+      <About></About>
+      <Project></Project>
+      <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 };

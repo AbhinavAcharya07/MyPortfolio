@@ -1,15 +1,16 @@
 import React from "react";
+import { ModeSwitcher } from "../contextApi.jsx";
+import { useContext } from "react";
 import "./Footer.css";
 import { useState } from "react";
-const Footer = (props) => {
+const Footer = () => {
+  const { color } = useContext(ModeSwitcher);
   //const [color, setcolor] = useState("white");
   //   const toggleTheme = () => {
-  //     setcolor(props.appResponse === "white" ? "black" : "white");
+  //     setcolor(color === "white" ? "black" : "white");
   //   };
   return (
-    <footer
-      className={props.appResponse === "white" ? "footerWhite" : "footerBlack"}
-    >
+    <footer className={color === "white" ? "footerWhite" : "footerBlack"}>
       Copyright &#169; 2025 Abhinav Acharya. All right received.
     </footer>
   );

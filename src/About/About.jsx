@@ -1,29 +1,26 @@
 import React from "react";
+import { ModeSwitcher } from "../contextApi.jsx";
+import { useContext } from "react";
 import "./About.css";
 import school from "../assets/school.jpg";
 import puc from "../assets/puc.jpg";
 import college from "../assets/college.jpg";
 import { motion } from "motion/react";
-const About = (props) => {
+const About = () => {
+  const { color } = useContext(ModeSwitcher);
   const educationTextHead =
-    props.appResponse === "white"
-      ? "educationTextWhiteHead"
-      : "educationTextBlackHead";
+    color === "white" ? "educationTextWhiteHead" : "educationTextBlackHead";
   const educationBarDiv =
-    props.appResponse === "white" ? "educationBarWhite" : "educationBarBlack";
+    color === "white" ? "educationBarWhite" : "educationBarBlack";
   const educationText =
-    props.appResponse === "white" ? "educationTextWhite" : "educationTextBlack";
+    color === "white" ? "educationTextWhite" : "educationTextBlack";
   // const educationTextPara =
-  //   props.appResponse === "white"
+  //   color === "white"
   //     ? "educationTextWhiteSpan"
   //     : "educationTextBlackSpan";
   return (
     <section id="about">
-      <div
-        className={
-          props.appResponse === "white" ? "aboutTextWhite" : "aboutTextBlack"
-        }
-      >
+      <div className={color === "white" ? "aboutTextWhite" : "aboutTextBlack"}>
         {" "}
         <h1 id={educationTextHead}>My Education</h1>
         <br />

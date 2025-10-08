@@ -1,9 +1,12 @@
 import React, { useRef, useState } from "react";
+import { ModeSwitcher } from "../contextApi.jsx";
+import { useContext } from "react";
 import "./Contact.css";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import emailjs from "@emailjs/browser";
-const Contact = (props) => {
+const Contact = () => {
+  const { color } = useContext(ModeSwitcher);
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -24,11 +27,7 @@ const Contact = (props) => {
   };
   return (
     <div id="contact">
-      <h1
-        className={
-          props.appResponse === "white" ? "contactWhite" : "contactBlack"
-        }
-      >
+      <h1 className={color === "white" ? "contactWhite" : "contactBlack"}>
         Contact Me
       </h1>
       <div className="contactText">
@@ -37,20 +36,18 @@ const Contact = (props) => {
       <form className="form" ref={form} onSubmit={sendEmail}>
         <input
           type="text"
-          className={props.appResponse === "white" ? "nameWhite" : "nameBlack"}
+          className={color === "white" ? "nameWhite" : "nameBlack"}
           placeholder="Your Name"
           name="from_name"
         />
         <input
           type="email"
-          className={
-            props.appResponse === "white" ? "emailWhite" : "emailBlack"
-          }
+          className={color === "white" ? "emailWhite" : "emailBlack"}
           placeholder="Your Email"
           name="from_email"
         />
         <textarea
-          className={props.appResponse === "white" ? "msgWhite" : "msgBlack"}
+          className={color === "white" ? "msgWhite" : "msgBlack"}
           name="message"
           rows="5"
           placeholder="Your Message"
@@ -59,9 +56,7 @@ const Contact = (props) => {
           <button
             type="submit"
             value="Send"
-            className={
-              props.appResponse === "white" ? "submitWhite" : "submitBlack"
-            }
+            className={color === "white" ? "submitWhite" : "submitBlack"}
           >
             Submit
           </button>
@@ -69,11 +64,7 @@ const Contact = (props) => {
       </form>
       <div id="gitLi">
         <a href="https://github.com/AbhinavAcharya07" target="_blank">
-          <button
-            className={
-              props.appResponse === "white" ? "gitLiWhite" : "gitLiBlack"
-            }
-          >
+          <button className={color === "white" ? "gitLiWhite" : "gitLiBlack"}>
             <FaGithub />
           </button>
         </a>
@@ -81,11 +72,7 @@ const Contact = (props) => {
           href="https://www.linkedin.com/in/abhinav-acharya-7b0634378"
           target="_blank"
         >
-          <button
-            className={
-              props.appResponse === "white" ? "gitLiWhite" : "gitLiBlack"
-            }
-          >
+          <button className={color === "white" ? "gitLiWhite" : "gitLiBlack"}>
             <FaLinkedinIn />
           </button>
         </a>

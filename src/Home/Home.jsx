@@ -1,12 +1,15 @@
 import React from "react";
+import { ModeSwitcher } from "../contextApi.jsx";
+import { useContext } from "react";
 import "./Home.css";
 import working from "../assets/working.png";
 import working2 from "../assets/working2.png";
-const Home = (props) => {
+const Home = () => {
+  const { color } = useContext(ModeSwitcher);
   return (
     <section id="intro">
       <div className="introContent">
-        <span className={props.appResponse === "white" ? "hiWhite" : "hiBlack"}>
+        <span className={color === "white" ? "hiWhite" : "hiBlack"}>
           Hi There <br />
         </span>
         <span id="name">
@@ -17,7 +20,7 @@ const Home = (props) => {
         <span id="dev">Developer</span>
       </div>
       <img
-        src={props.appResponse === "white" ? working : working2}
+        src={color === "white" ? working : working2}
         alt="image"
         className="bg"
       />
