@@ -21,12 +21,13 @@
      padding: min(1.25rem,5%) max(10%,5%,2%); 
     color: #ddd;
     border-bottom: 2px solid rgb(31, 8, 48);
-   background: linear-gradient(
+   /* background: linear-gradient(
     to bottom, 
     #000000, 
     rgba(0, 0, 0, 0.8), 
     #000000
-  );
+  ); */
+  background-color: black;
     color: rgba(220, 20,60);
      position: sticky; top: 0;
       z-index: 1000;
