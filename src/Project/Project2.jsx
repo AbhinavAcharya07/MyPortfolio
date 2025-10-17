@@ -24,11 +24,11 @@ const Project2 = (props) => {
           <h1 id={props.projectTextHead}>CryptoPlace</h1>
           <a
             id="plink3"
-            href="https://github.com/AbhinavAcharya07/CryptoPlace"
+            href="https://crypto-place-m4u0k45sz-abhinavs-projects-dff478f0.vercel.app/"
             target="_blank"
             style={{ color: "red" }}
           >
-            GitrepoLink
+            cryptoplace.com
           </a>
         </div>
         <p id={props.projectTextPara}>
