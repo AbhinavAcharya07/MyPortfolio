@@ -1,6 +1,7 @@
 import React from "react";
 import "./Project.css";
-import rideVista from "../assets/rideVista.png";
+import myNotes1 from "../assets/myNotes1.png";
+import myNotes from "../assets/myNotes.png";
 import { motion } from "motion/react";
 const Project1 = (props) => {
   return (
@@ -18,7 +19,11 @@ const Project1 = (props) => {
       }}
       className={props.projectBar}
     >
-      <img src={rideVista} alt="" className="projectImg1" />
+      {" "}
+      <div className="project1Imgs">
+        <img src={myNotes1} alt="" className="projectImg1" />
+        <img src={myNotes} alt="" className="projectImg1" />
+      </div>
       <div className={props.projectText}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <h1 id={props.projectTextHead}>MyNotes</h1>

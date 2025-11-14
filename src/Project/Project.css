@@ -1,97 +1,109 @@
-#project{
-overflow: hidden;
-width: 100vw;
-max-width: 100rem;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-margin: 0 auto;
+#project {
+  overflow: hidden;
+  width: 100vw;
+  max-width: 100rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
 }
-.ProjectTextWhite{ 
-font-weight: 500;
-font-size: 1.25rem;
-max-width: 85%;
-padding: 0.1rem 0.05rem;
+.ProjectTextWhite {
+  font-weight: 500;
+  font-size: 1.25rem;
+  max-width: 85%;
+  padding: 0.1rem 0.05rem;
 }
-.ProjectTextBlack{ 
-font-weight: 500;
-font-size: 1.25rem;
-max-width: 85%;
-padding: 0.1rem 0.05rem;
+.ProjectTextBlack {
+  font-weight: 500;
+  font-size: 1.25rem;
+  max-width: 85%;
+  padding: 0.1rem 0.05rem;
 }
 .projectBars {
-margin: 1.5rem;
-width: 100vw;
-max-width: 90%;
-text-align: left;
+  margin: 1.5rem;
+  width: 100vw;
+  max-width: 90%;
+  text-align: left;
 }
-.projectBarWhite{
-height: auto;
-display: flex;
-margin: 1rem;
-padding: 1.5rem 2rem;
-border-radius: 0.5rem;
-background: rgb(184, 168, 168);
+.projectBarWhite {
+  height: auto;
+  display: flex;
+  margin: 1rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  background: rgb(184, 168, 168);
 }
-.projectBarBlack{
-height: auto;
-display: flex;
-margin: 1rem;
-padding: 1.5rem 2rem;
-border-radius: 0.5rem;
-background: rgb(50, 50, 50);
+.projectBarBlack {
+  height: auto;
+  display: flex;
+  margin: 1rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  background: rgb(50, 50, 50);
+}
+.project1Imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  height: 24rem;
+  width: 36rem;
+  align-items: center;
+  margin: 5px;
+  /* margin: 20px 20px 20px 20px;
+  border-radius: 10px;*/
 }
 .projectImg1 {
-object-fit: cover;
-height: 10rem;
-width: 18rem;
-align-items: center;
-margin: 20px 20px 20px 20px;
-border-radius: 10px;
+  object-fit: cover;
+  height: 12rem;
+  width: 18rem;
+  align-items: center;
+  margin: 20px 20px 20px 20px;
+  border-radius: 10px;
+  padding: 3px;
 }
 .projectImg2 {
-object-fit: cover;
-height: 15rem;
-width: 18rem;
-align-items: center;
-margin: 20px 20px 20px 20px;
-border-radius: 10px;
+  object-fit: cover;
+  height: 15rem;
+  width: 18rem;
+  align-items: center;
+  margin: 20px 20px 20px 20px;
+  border-radius: 10px;
 }
 .projectImg3 {
-object-fit: cover;
-height: 10rem;
-width: 18rem;
-align-items: center;
-margin: 20px 20px 20px 20px;
-border-radius: 10px;
+  object-fit: cover;
+  height: 10rem;
+  width: 18rem;
+  align-items: center;
+  margin: 20px 20px 20px 20px;
+  border-radius: 10px;
 }
- .projectTextWhite {
-padding: 10px;
-font-size: 1rem;
-font-weight: 400;
+.projectTextWhite {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 400;
 }
 .projectTextBlack {
-padding: 10px;
-font-size: 1rem;
-font-weight: 400;
-} 
-#projectTextWhiteHead{
-    color: rgb(211, 48, 184);
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 400;
 }
-#projectTextBlackHead{
-     color: rgba(220, 20,60);
+#projectTextWhiteHead {
+  color: rgb(211, 48, 184);
 }
-#projectTextWhiteSpan{
-color: black;
-font-size: 1.15rem;
-font-weight: 400;
-
+#projectTextBlackHead {
+  color: rgba(220, 20, 60);
 }
-#projectTextBlackSpan{
-color:white;
-font-size: 1.15rem;
-font-weight: 400;
+#projectTextWhiteSpan {
+  color: black;
+  font-size: 1.15rem;
+  font-weight: 400;
 }
-
+#projectTextBlackSpan {
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 400;
+}
