@@ -46,8 +46,10 @@ const Project1 = (props) => {
           skeleton animations are implemented during asynchronous API calls,
           ensuring smooth perceived performance. <br />
           <b>Language used:</b> <br />
-          <b>Front end:</b>HTML,CSS,JAVASCRIPT. <br />
-          <b>Back-end:</b>PHP,MYSQL.
+          <b>Front end:</b>React.js, JavaScript, CSS <br />
+          <b>Back-end:</b>Node.js, Express.js <br />
+          <b>Database:</b>MongoDB <br />
+          <b>API Integration:</b>Gemini AI API
         </p>
       </div>
     </motion.div>
