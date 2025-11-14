@@ -21,22 +21,30 @@ const Project1 = (props) => {
       <img src={rideVista} alt="" className="projectImg1" />
       <div className={props.projectText}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <h1 id={props.projectTextHead}>RideVista</h1>
+          <h1 id={props.projectTextHead}>MyNotes</h1>
           <a
             id="plink3"
-            href="https://github.com/AbhinavAcharya07/ridevista"
+            href="https://question-bank-gbs8.vercel.app/"
             target="_blank"
             style={{ color: "red" }}
           >
-            GitrepoLink
+            mynotes.com
           </a>
         </div>
         <p id={props.projectTextPara}>
-          <b>Objective of the project:</b> To provide convenient, reliable, and
-          affordable transportation solutions, connecting users with a network
-          of drivers for hassle-free rides across various Tier-3 Locations.
-          Through seamless technology integration and a user-friendly interface.{" "}
-          <br />
+          <b>Objective of the project:</b> MyNotes is a dynamic, responsive
+          question bank web application designed to empower users to
+          create,manage and revise technical notes efficiently with intelligent,
+          AI-powered search capabilities.Built using the MERN stack, the
+          platform delivers a seamless full-stack experience with RESTful APIs
+          developed in Node.js + Express.js and secure, schema-based data
+          storage powered by MongoDB with Mongoose ODM.It supports complete CRUD
+          operations–enabling users to effortlessly create, read, update and
+          delete structured notes with fields for Topic, Question and Answer.The
+          integration of Google Gemini Generative AI API enables real-time
+          semantic search and Q/A assistance.To enhance user experience,loading
+          skeleton animations are implemented during asynchronous API calls,
+          ensuring smooth perceived performance. <br />
           <b>Language used:</b> <br />
           <b>Front end:</b>HTML,CSS,JAVASCRIPT. <br />
           <b>Back-end:</b>PHP,MYSQL.
