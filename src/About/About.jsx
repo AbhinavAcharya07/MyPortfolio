@@ -5,6 +5,9 @@ import "./About.css";
 import school from "../assets/school.jpg";
 import puc from "../assets/puc.jpg";
 import college from "../assets/college.jpg";
+import SSLC from "../assets/SSLC.pdf";
+import PUC from "../assets/PUC.pdf";
+import { FaFilePdf } from "react-icons/fa";
 import { motion } from "motion/react";
 const About = () => {
   const { color } = useContext(ModeSwitcher);
@@ -52,17 +55,27 @@ const About = () => {
           }}
           className={educationBarDiv}
         >
-          <img src={college} alt="" className="educationImg" />
+          <div className="CnImg">
+            <img src={college} alt="" className="educationImg" />
+          </div>
           <div className={educationText}>
             <h1 id={educationTextHead}>Graduation</h1>
-            <p
-            // id={educationTextPara}
-            >
+            <p>
               I am a B.Tech in Mechanical Engineering student at the University
               of Visvesvaraya College of Engineering, Bengaluru,with a CGPA of{" "}
-              <b>7.28.</b>
+              <b>7.8</b>.
             </p>
+            <a href="" target="blank">
+              <button
+                className="Marks"
+                id={color === "white" ? "MarksWhite" : "MarksBlack"}
+              >
+                <FaFilePdf />
+                Marks
+              </button>
+            </a>
           </div>
+          <div className="Rightline"></div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 100 }}
@@ -78,7 +91,9 @@ const About = () => {
           }}
           className={educationBarDiv}
         >
-          <img src={puc} alt="" className="educationImg" />
+          <div className="CnImg">
+            <img src={puc} alt="" className="educationImg" />
+          </div>
           <div className={educationText}>
             <h1 id={educationTextHead}>Pre University (PUC)</h1>
             <p
@@ -88,7 +103,17 @@ const About = () => {
               Temple PU College, Mandharthi, Udupi, with a percentage of{" "}
               <b>93.16%.</b>
             </p>
+            <a href={PUC} target="blank">
+              <button
+                className="Marks"
+                id={color === "white" ? "MarksWhite" : "MarksBlack"}
+              >
+                <FaFilePdf />
+                Marks
+              </button>
+            </a>
           </div>
+          <span className="Rightline"></span>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -100,20 +125,30 @@ const About = () => {
             ease: "easeOut",
             type: "spring",
             stiffness: 300,
-            damping: 20,
+            damping: 10,
           }}
           className={educationBarDiv}
         >
-          <img src={school} alt="" className="educationImg" />
+          <div className="CnImg">
+            <img src={school} alt="" className="educationImg" />
+          </div>
           <div className={educationText}>
             <h1 id={educationTextHead}>Class 10 (SSLC)</h1>
-            <p
-            //  id={educationTextPara}
-            >
+            <p>
               I completed my Class 10 at Karnataka Public School Kokkarne,
               Udupi, with a percentage of <b>91.36%.</b>
             </p>
+            <a href={SSLC} target="blank">
+              <button
+                className="Marks"
+                id={color === "white" ? "MarksWhite" : "MarksBlack"}
+              >
+                <FaFilePdf />
+                Marks
+              </button>
+            </a>
           </div>
+          <span className="Rightline"></span>
         </motion.div>
       </div>
     </section>

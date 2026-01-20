@@ -11,7 +11,8 @@
 }
 .aboutTextWhite {
   font-weight: 500;
-  font-size: 1.25rem;
+  /* font-size: clamp(20px, calc(0.1vw + 1px), 30px); */
+  font-size: max(20px, 1.4vw);
   max-width: 85%;
   padding: 0.1rem 0.05rem;
 }
@@ -21,6 +22,7 @@
   max-width: 85%;
   padding: 0.1rem 0.05rem;
 }
+
 .educationBars {
   margin: 1.5rem;
   width: 100vw;
@@ -28,20 +30,75 @@
   text-align: left;
 }
 .educationBarWhite {
-  height: 200px;
+  height: auto;
   display: flex;
-  margin: 1rem;
+  flex-direction: row;
+  margin: 1.5rem;
   padding: 1.5rem 2rem;
   border-radius: 0.5rem;
   background: rgb(184, 168, 168);
+  position: relative;
 }
 .educationBarBlack {
-  height: 200px;
+  height: auto;
   display: flex;
-  margin: 1rem;
+  flex-direction: row;
+  margin: 1.5rem;
   padding: 1.5rem 2rem;
   border-radius: 0.5rem;
   background: rgb(50, 50, 50);
+  position: relative;
+}
+/* .educationBarBlack::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0; 
+  height: 80%;
+  width: 6px;
+  background-color: #6366f1; 
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  
+} */
+.Rightline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-left: 5px solid #0ef;
+  border-radius: 0.5rem;
+}
+.Marks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 42.25px;
+  width: max(7rem, 10%);
+  margin-top: 7px;
+  padding: auto;
+  border: 2px solid;
+  background-color: transparent;
+  font-family: fantasy-ui;
+  font-size: 18px;
+  font-weight: 650;
+  border-radius: 1.25rem;
+  cursor: pointer;
+}
+#MarksBlack {
+  border-color: white;
+  color: white;
+}
+#MarksWhite:hover {
+  background-color: rgb(62, 207, 255);
+}
+#MarksBlack:hover {
+  background-color: rgb(14, 244, 129);
+  border-color: black;
+  color: black;
 }
 .educationImg {
   object-fit: cover;
@@ -66,29 +123,20 @@
 #educationTextBlackHead {
   color: rgba(220, 20, 60);
 }
-/* #educationTextWhiteSpan{
-color: black;
-font-size: 1.15rem;
-font-weight: 400;
-
+@media (max-width: 667px) {
+  .educationBarWhite {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .educationBarBlack {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .CnImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
-#educationTextBlackSpan{
-color:white;
-font-size: 1.15rem;
-font-weight: 400;
-animation-name: pulse-glow;
-animation-duration: 1s;
-animation-iteration-count: infinite;
-animation-direction: alternate;
-}
-@keyframes pulse-glow {
-    from {
-
-text-shadow: 0 0 5px #fff, 0 0 10px#00b3ff;
-}
-to
-{
-text-shadow: 0 0 10px #fff, 0 0
-20px #00b3ff, 0 0 30px #00b3ff;
-}
-}  */

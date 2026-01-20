@@ -2,15 +2,18 @@ import React from "react";
 import "./Project.css";
 import CryptoPlace from "../assets/CryptoPlace.png";
 import { motion } from "motion/react";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+
 const Project2 = (props) => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 100 }}
+      initial={{ opacity: 0, x: 30 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "0px 0px -150px 0px" }}
       whileHover={{ scale: 1.07 }}
       transition={{
-        duration: 0.5,
+        duration: 2,
+        delay: 0.1,
         ease: "easeOut",
         type: "spring",
         stiffness: 300,
@@ -18,9 +21,27 @@ const Project2 = (props) => {
       }}
       className={props.projectBar}
     >
-      <img src={CryptoPlace} alt="" className="projectImg2" />
+      <div className="project1Imgs">
+        <motion.img
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 1.2,
+            ease: "easeOut",
+          }}
+          src={CryptoPlace}
+          alt=""
+          className="projectImg2"
+        />
+      </div>
       <div className={props.projectText}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+          }}
+        >
           <h1 id={props.projectTextHead}>CryptoPlace</h1>
           <a
             id="plink3"
@@ -28,7 +49,10 @@ const Project2 = (props) => {
             target="_blank"
             style={{ color: "red" }}
           >
-            cryptoplace.com
+            <button className="DemoBtn" id={props.DemoBtn}>
+              <FaArrowUpRightFromSquare />
+              Live Demo
+            </button>
           </a>
         </div>
         <p id={props.projectTextPara}>

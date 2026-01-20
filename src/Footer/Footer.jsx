@@ -11,7 +11,7 @@ const Footer = () => {
   //   };
   return (
     <footer className={color === "white" ? "footerWhite" : "footerBlack"}>
-      Copyright &#169; 2025 Abhinav Acharya. All right received.
+      Copyright &#169; 2026 Abhinav Acharya. All right received.
     </footer>
   );
 };

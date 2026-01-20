@@ -15,6 +15,7 @@ const Project = () => {
     color === "white" ? "projectTextWhiteHead" : "projectTextBlackHead";
   const projectTextPara =
     color === "white" ? "projectTextWhiteSpan" : "projectTextBlackSpan";
+  const DemoBtn = color === "white" ? "DemoWhite" : "DemoBlack";
   return (
     <section id="project">
       <div
@@ -44,24 +45,28 @@ const Project = () => {
           projectText={projectText}
           projectTextHead={projectTextHead}
           projectTextPara={projectTextPara}
+          DemoBtn={DemoBtn}
         ></Project4>
         <Project3
           projectBar={projectBar}
           projectText={projectText}
           projectTextHead={projectTextHead}
           projectTextPara={projectTextPara}
+          DemoBtn={DemoBtn}
         ></Project3>
         <Project2
           projectBar={projectBar}
           projectText={projectText}
           projectTextHead={projectTextHead}
           projectTextPara={projectTextPara}
+          DemoBtn={DemoBtn}
         ></Project2>
         <Project1
           projectBar={projectBar}
           projectText={projectText}
           projectTextHead={projectTextHead}
           projectTextPara={projectTextPara}
+          DemoBtn={DemoBtn}
         ></Project1>
       </div>
     </section>

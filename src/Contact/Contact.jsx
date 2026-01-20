@@ -4,6 +4,10 @@ import { useContext } from "react";
 import "./Contact.css";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
+import { GrInstagram } from "react-icons/gr";
+import { SiGmail } from "react-icons/si";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 import emailjs from "@emailjs/browser";
 const Contact = () => {
   const { color } = useContext(ModeSwitcher);
@@ -22,7 +26,7 @@ const Contact = () => {
         },
         (error) => {
           console.log("FAILED...", error.text);
-        }
+        },
       );
   };
   return (
@@ -33,7 +37,12 @@ const Contact = () => {
       <div className="contactText">
         Please fill out the form below to contact me.{" "}
       </div>
-      <form className="form" ref={form} onSubmit={sendEmail}>
+      <form
+        className="form"
+        ref={form}
+        onSubmit={sendEmail}
+        id={color === "white" ? "formWhite" : "formBlack"}
+      >
         <input
           type="text"
           className={color === "white" ? "nameWhite" : "nameBlack"}
@@ -62,6 +71,17 @@ const Contact = () => {
           </button>
         </div>
       </form>
+      <div className="details">
+        <span>
+          <SiGmail /> abhinavachar235@gmail.com
+        </span>
+        <span>
+          <FaPhoneAlt /> +91 6360700659
+        </span>
+        <span>
+          <FaLocationDot /> Bengaluru, India
+        </span>
+      </div>
       <div id="gitLi">
         <a href="https://github.com/AbhinavAcharya07" target="_blank">
           <button className={color === "white" ? "gitLiWhite" : "gitLiBlack"}>
@@ -74,6 +94,11 @@ const Contact = () => {
         >
           <button className={color === "white" ? "gitLiWhite" : "gitLiBlack"}>
             <FaLinkedinIn />
+          </button>
+        </a>
+        <a href="https://www.instagram.com/acharya_abhi_07" target="_blank">
+          <button className={color === "white" ? "gitLiWhite" : "gitLiBlack"}>
+            <GrInstagram />
           </button>
         </a>
       </div>

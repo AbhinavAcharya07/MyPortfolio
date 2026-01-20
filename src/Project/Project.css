@@ -30,7 +30,9 @@
 .projectBarWhite {
   height: auto;
   display: flex;
-  margin: 1rem;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  margin: 2rem;
   padding: 1.5rem 2rem;
   border-radius: 0.5rem;
   background: rgb(184, 168, 168);
@@ -38,6 +40,7 @@
 .projectBarBlack {
   height: auto;
   display: flex;
+  /* flex-wrap: wrap; */
   margin: 1rem;
   padding: 1.5rem 2rem;
   border-radius: 0.5rem;
@@ -49,7 +52,7 @@
   justify-content: center;
   align-items: center;
   object-fit: cover;
-  height: 24rem;
+  height: auto;
   width: 36rem;
   align-items: center;
   margin: 5px;
@@ -85,6 +88,7 @@
   padding: 10px;
   font-size: 1rem;
   font-weight: 400;
+  height: auto;
 }
 .projectTextBlack {
   padding: 10px;
@@ -93,9 +97,11 @@
 }
 #projectTextWhiteHead {
   color: rgb(211, 48, 184);
+  font-size: max(2vw, 3vh);
 }
 #projectTextBlackHead {
   color: rgba(220, 20, 60);
+  font-size: max(2vw, 3vh);
 }
 #projectTextWhiteSpan {
   color: black;
@@ -106,4 +112,59 @@
   color: white;
   font-size: 1.15rem;
   font-weight: 400;
+}
+.DemoBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 42.25px;
+  width: auto;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding: 10px;
+  border: 2px solid;
+  background-color: transparent;
+  font-family: fantasy-ui;
+  font-size: 18px;
+  font-weight: 650;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+#DemoBlack {
+  border-color: white;
+  color: white;
+}
+#DemoWhite:hover {
+  background-color: rgb(62, 207, 255);
+}
+#DemoBlack:hover {
+  background-color: rgb(14, 244, 129);
+  border-color: black;
+  color: black;
+}
+@media (max-width: 804px) {
+  .projectBarWhite {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .projectBarBlack {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .project1Imgs {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+  }
+  .projectImg2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
