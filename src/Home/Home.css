@@ -1,38 +1,29 @@
 #intro {
   width: 100%;
-  /* height: 100vh; */
   margin: 0 auto;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-bottom: 12vh;
   overflow: hidden;
   display: flex;
-  flex: 1;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  /* flex-wrap: wrap; */
-  /* position: relative; */
 }
 .Profile {
   margin: 10px;
   height: 30vw;
   width: 30vw;
   overflow: hidden;
-  /* border: 2px solid black; */
   border-radius: 20px;
 }
 .bg {
-  /* position: absolute; */
-  /* top: 0;
-  right: 0; */
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
   object-fit: fill;
-
-  /* margin: 20px; */
-  /* float: right; */
 }
 .introContent {
-  height: 90vh;
+  height: 100%;
   width: 50vw;
   padding: 2rem;
   margin-left: min(5%, 3rem);
@@ -70,9 +61,10 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
-  height: max(3rem, 7%);
+  height: 50px;
   width: max(7rem, 10%);
   padding: auto;
+  margin-top: 5px;
   border: 2px solid;
   background-color: transparent;
   font-family: fantasy-ui;
@@ -127,14 +119,13 @@
   #intro {
     flex-direction: column-reverse;
     flex-wrap: wrap;
-    /* height: 90vh; */
   }
   .Profile {
     margin: 10px;
     height: 100%;
     width: 100%;
     overflow: hidden;
-    /* border: 2px solid black; */
+
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -143,16 +134,13 @@
   .bg {
     width: 50%;
     height: 100%;
-
     object-fit: contain;
     border-radius: 20px;
   }
   .introContent {
-    height: 90vh;
-    /* height: 80vh; */
     width: 100vw;
     padding: 2rem;
-    /* margin-left: min(5%, 3rem); */
+
     font-size: 3rem;
     font-weight: 700;
     display: flex;

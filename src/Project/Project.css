@@ -113,6 +113,12 @@
   font-size: 1.15rem;
   font-weight: 400;
 }
+.GDBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
 .DemoBtn {
   display: flex;
   align-items: center;

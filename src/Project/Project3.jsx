@@ -4,6 +4,7 @@ import myNotes1 from "../assets/myNotes1.png";
 import myNotes from "../assets/myNotes.png";
 import { motion, wrap } from "motion/react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { BsGithub } from "react-icons/bs";
 const Project3 = (props) => {
   return (
     <motion.div
@@ -55,17 +56,30 @@ const Project3 = (props) => {
           }}
         >
           <h1 id={props.projectTextHead}>MyNotes</h1>
-          <a
-            id="plink3"
-            href="https://question-bank-gbs8.vercel.app/"
-            target="_blank"
-            style={{ color: "red" }}
-          >
-            <button className="DemoBtn" id={props.DemoBtn}>
-              <FaArrowUpRightFromSquare />
-              Live Demo
-            </button>
-          </a>
+          <div className="GDBtn">
+            <a
+              id="plink3"
+              href="https://github.com/AbhinavAcharya07/Question-Bank.git"
+              target="_blank"
+              style={{ color: "red" }}
+            >
+              <button className="DemoBtn" id={props.DemoBtn}>
+                <BsGithub />
+                Github
+              </button>
+            </a>
+            <a
+              id="plink3"
+              href="https://question-bank-gbs8.vercel.app/"
+              target="_blank"
+              style={{ color: "red" }}
+            >
+              <button className="DemoBtn" id={props.DemoBtn}>
+                <FaArrowUpRightFromSquare />
+                Live Demo
+              </button>
+            </a>
+          </div>
         </div>
         <p id={props.projectTextPara}>
           <b>Objective of the project:</b> MyNotes is a dynamic, responsive

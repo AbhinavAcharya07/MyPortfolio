@@ -21,10 +21,4 @@ a {
   width: 100vw;
   color: white;
   background: black;
-  /* background: linear-gradient(
-    to bottom, 
-    #000000, 
-    rgba(0, 0, 0, 0.8), 
-    #000000
-  ); */
 }
