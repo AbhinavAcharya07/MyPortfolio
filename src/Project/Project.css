@@ -40,8 +40,9 @@
 .projectBarBlack {
   height: auto;
   display: flex;
+  flex-direction: row;
   /* flex-wrap: wrap; */
-  margin: 1rem;
+  margin: 2rem;
   padding: 1.5rem 2rem;
   border-radius: 0.5rem;
   background: rgb(50, 50, 50);
@@ -94,6 +95,7 @@
   padding: 10px;
   font-size: 1rem;
   font-weight: 400;
+  height: auto;
 }
 #projectTextWhiteHead {
   color: rgb(211, 48, 184);
