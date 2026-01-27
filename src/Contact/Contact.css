@@ -167,7 +167,7 @@
   margin: 20px;
   padding: 10px;
 }
-.details span:hover {
+.details a:hover {
   color: rgb(14, 244, 129);
   cursor: pointer;
 }

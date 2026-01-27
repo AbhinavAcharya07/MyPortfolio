@@ -72,15 +72,18 @@ const Contact = () => {
         </div>
       </form>
       <div className="details">
-        <span>
+        <a
+          target="_blank"
+          href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsTPKtQmqgNpCjrWFQzmJlBhGSpDvVcJSrRRwbBtpwkpMScPDKTFdWnrHzCDkjXJZbQhtCml"
+        >
           <SiGmail /> abhinavachar235@gmail.com
-        </span>
-        <span>
+        </a>
+        <a>
           <FaPhoneAlt /> +91 6360700659
-        </span>
-        <span>
+        </a>
+        <a target="_blank" href="https://maps.app.goo.gl/2H5S4mtnaHX9zJMi8">
           <FaLocationDot /> Bengaluru, India
-        </span>
+        </a>
       </div>
       <div id="gitLi">
         <a href="https://github.com/AbhinavAcharya07" target="_blank">

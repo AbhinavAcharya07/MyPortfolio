@@ -99,11 +99,11 @@
 }
 #projectTextWhiteHead {
   color: rgb(211, 48, 184);
-  font-size: max(2vw, 3vh);
+  font-size: max(2vw, 2.8vh);
 }
 #projectTextBlackHead {
   color: rgba(220, 20, 60);
-  font-size: max(2vw, 3vh);
+  font-size: max(2vw, 2.8vh);
 }
 #projectTextWhiteSpan {
   color: black;
@@ -145,11 +145,13 @@
 }
 #DemoWhite:hover {
   background-color: rgb(62, 207, 255);
+  border-color: rgb(62, 207, 255);
 }
 #DemoBlack:hover {
   background-color: rgb(14, 244, 129);
   border-color: black;
   color: black;
+  border-color: rgb(14, 244, 129);
 }
 @media (max-width: 804px) {
   .projectBarWhite {
@@ -174,5 +176,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+  }
+  .projectImg1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .projectImg3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 }

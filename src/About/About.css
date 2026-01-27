@@ -94,11 +94,13 @@
 }
 #MarksWhite:hover {
   background-color: rgb(62, 207, 255);
+  border: none;
 }
 #MarksBlack:hover {
   background-color: rgb(14, 244, 129);
   border-color: black;
   color: black;
+  border: none;
 }
 .educationImg {
   object-fit: cover;
