@@ -7,6 +7,7 @@ import puc from "../assets/puc.jpg";
 import college from "../assets/college.jpg";
 import SSLC from "../assets/SSLC.pdf";
 import PUC from "../assets/PUC.pdf";
+import PDC from "../assets/PDC.pdf";
 import { FaFilePdf } from "react-icons/fa";
 import { motion } from "motion/react";
 const About = () => {
@@ -65,7 +66,7 @@ const About = () => {
               of Visvesvaraya College of Engineering, Bengaluru,with a CGPA of{" "}
               <b>7.8</b>.
             </p>
-            <a href="" target="blank">
+            <a href={PDC} target="blank">
               <button
                 className="Marks"
                 id={color === "white" ? "MarksWhite" : "MarksBlack"}
