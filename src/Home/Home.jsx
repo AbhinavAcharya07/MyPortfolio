@@ -51,7 +51,7 @@ const Home = () => {
             <img src={arrowR2} className="hover" />
             Hire Me
           </Link>
-          <a target="_blank" href={Resume}>
+          <a target="_blank" href="https://pdflink.to/abhinavresume/">
             <button
               className="resume"
               id={color === "white" ? "resumeWhite" : "resumeBlack"}
