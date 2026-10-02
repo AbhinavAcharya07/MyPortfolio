@@ -59,7 +59,7 @@ const Project3 = (props) => {
           <div className="GDBtn">
             <a
               id="plink3"
-              href="https://github.com/AbhinavAcharya07/Question-Bank.git"
+              href="https://github.com/AbhinavAcharya07/Mynotes_Agentic"
               target="_blank"
               style={{ color: "red" }}
             >
@@ -70,7 +70,7 @@ const Project3 = (props) => {
             </a>
             <a
               id="plink3"
-              href="https://question-bank-gbs8.vercel.app/"
+              href="https://mynotes-agentic.vercel.app/"
               target="_blank"
               style={{ color: "red" }}
             >
