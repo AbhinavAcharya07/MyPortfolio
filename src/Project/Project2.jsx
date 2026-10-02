@@ -1,6 +1,6 @@
 import React from "react";
 import "./Project.css";
-import CryptoPlace from "../assets/CryptoPlace.png";
+import CryptoPlace from "../assets/cryptoPlace.png";
 import { motion } from "motion/react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
